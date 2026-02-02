@@ -89,4 +89,24 @@ fi_num_rows: 1x1 value; set via interface
 | 15 | Total earnings (\$) |
 | 16 | Availability status (boolean) |
 
+### `EV_Data` Matrix
+
+`EV_Data` is an `n × 14` matrix, where each row corresponds to an electric vehicle (EV).
+
+| Column | Description |
+|-------:|-------------|
+| 1 | EV identifier |
+| 2 | EV x-coordinate |
+| 3 | EV y-coordinate |
+| 4 | Current zone index |
+| 5 | Departure time (or service-related time parameter; may be unused) |
+| 6 | Current state of charge (SoC) as a percentage |
+| 7 | Requested state of charge (SoC) as a percentage |
+| 8 | Current battery energy (kWh) |
+| 9 | Requested battery energy (kWh) |
+| 10 | Waiting time until service (set when EV is served) |
+| 11 | Required fast charging time (minutes) |
+| 12 | Maximum budget (\$) |
+| 13 | Arrival time (if enabled; may be unused in some scenarios) |
+| 14 | Departure time from AoI |
 
