@@ -64,23 +64,29 @@ EV_zone: mx1 matrix; defines the zone number each EV is in
 time_slots: 1xt matrix; defines the time-stamps for the run
 fi_num_rows: 1x1 value; set via interface
 
-## Data structures
-MCS_Data: nx16 matrix 
-Col #: Col meaning
-1: MCS ID
-2: MCS x-coordinate
-3: MCS y-coordinate
-4: MCS zone
-5: Time MCS will be free at (finishes current service)
-6: MCS battery capacity (in kWh)
-7: Max charging points on MCS
-8: MCS' energy tradre price ($)
-9: MCS' travel cost ($)
-10: MCS' charging cost ($)
-11: Total distance travelled
-12: Number of zone changes
-13: Current battery SoC (kWh)
-14: Allocated? (bool)
-15: Total Earning ($)
-16: Available? (bool)
+## Data Structures
+
+### `MCS_Data` Matrix
+
+`MCS_Data` is an `n × 16` matrix, where each row corresponds to a mobile charging station (MCS).
+
+| Column | Description |
+|-------:|-------------|
+| 1 | MCS identifier |
+| 2 | MCS x-coordinate |
+| 3 | MCS y-coordinate |
+| 4 | MCS zone index |
+| 5 | Time at which the MCS becomes free (end of current service) |
+| 6 | MCS battery capacity (kWh) |
+| 7 | Maximum number of charging points on the MCS |
+| 8 | Energy trading price (\$/kWh) |
+| 9 | Travel cost (\$ per unit distance) |
+| 10 | Charging cost (\$ per unit energy) |
+| 11 | Total distance traveled |
+| 12 | Number of zone changes |
+| 13 | Current battery state of charge (kWh) |
+| 14 | Allocation status (boolean) |
+| 15 | Total earnings (\$) |
+| 16 | Availability status (boolean) |
+
 
